@@ -1,0 +1,7 @@
+{
+  "name": "Digital Flophouse",
+  "tagline": "Old programmers never die...they just lose their memory",
+  "body": "### Who are you?\r\n![](images/who.png)\r\n\r\nMy name is Evan Kaufman, and I am a developer. Professionally, my focus has been on web development, but I'm a frequent open source contributor and a technological jack of all trades.\r\n\r\n### What is this?\r\n![](images/what.png)\r\n\r\nIn lieu of the stereotypical \"seldom updated personal blog\", this is a low maintenance and single page personal site.\r\n\r\n### How do I contact you?\r\n![](images/how.png)\r\n\r\n**If you are a recruiter, please _do not_. I am happy where I am.** Otherwise, you can reach out to me on any of the following services...\r\n\r\n* [Github](https://github.com/EvanK/)\r\n* [Stack Overflow CV](http://stackoverflow.com/cv/evanskaufman)\r\n* [LinkedIn](https://www.linkedin.com/in/evanskaufman)\r\n* [Twitter](https://twitter.com/evanskaufman)",
+  "google": "",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

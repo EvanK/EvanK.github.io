@@ -1,4 +1,4 @@
 EvanK.github.io
 ===============
 
-Ramblings of a wandering web development ronin
+Ramblings of a web developer slash angry old man
