@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base href="http://www.ghostglyphstudios.com/">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>GhostGlyphStudios</title>
+<!-- carousel styles -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.3.4/dist/jquery.fancybox.min.css"/>
+<!-- /carousel styles -->
+<style type="text/css">
+body {
+	background-image: url(http://www.ghostglyphstudios.com/images/VIC_tile_bg.jpg);
+	background-repeat: repeat;
+}
+.white {
+	color: #FFF;
+}
+/* carousel container styles */
+.slick-dots li button:before {
+  color: white;
+}
+.slick-dots li.slick-active button:before {
+  color: white;
+}
+.portfolio-carousel {
+  margin: auto;
+  width: 700px;
+  height: 395px;
+}
+.portfolio-carousel .slick-slide > a > img {
+  margin: auto;
+  border: 0;
+}
+/* /carousel container styles */
+</style>
+</head>
+
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="8"><a href="index.html"><img src="images/GGS_WP_01.gif" width="1024" height="211" /></a></td>
+  </tr>
+  <tr>
+    <td width="120"><img src="images/GGS_WP_02.gif" width="117" height="37" /></td>
+    <td width="161"><img src="images/GGS_WP_03.gif" width="156" height="37" /></td>
+    <td width="132"><a href="portfolio.html"><img src="images/GGS_WP_04.gif" width="128" height="37" /></a></td>
+    <td width="135"><a href="about.html"><img src="images/GGS_WP_05.gif" width="131" height="37" /></a></td>
+    <td width="133"><a href="services.html"><img src="images/GGS_WP_06.gif" width="129" height="37" /></a></td>
+    <td width="136"><a href="contact.html"><img src="images/GGS_WP_07.gif" width="136" height="37" /></a></td>
+    <td width="115"><img src="images/GGS_WP_08.gif" width="108" height="37" /></td>
+    <td width="126"><img src="images/GGS_WP_09.gif" width="119" height="37" /></td>
+  </tr>
+  <tr>
+    <td><img src="images/GGS_WP_10.gif" width="117" height="428" /></td>
+    <td colspan="6" bgcolor="#000000">
+      <!-- carousel container -->
+      <div class="portfolio-carousel"></div>
+      <!-- /carousel container -->
+    </td>
+    <td><img src="images/GGS_WP_14.gif" width="119" height="428" /></td>
+  </tr>
+  <tr>
+    <td colspan="8"><img src="images/GGS_WP_15.gif" width="1024" height="92" /></td>
+  </tr>
+</table>
+<!-- carousel scripting -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.3.4/dist/jquery.fancybox.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    // lightbox defaults
+    $.fancybox.defaults.keyboard = false;
+    $.fancybox.defaults.infobar = false;
+    $.fancybox.defaults.smallBtn = true;
+    $.fancybox.defaults.toolbar = false;
+
+    // fetch external json
+    $.ajax({
+      type: "GET",
+      url: "http://www.digitalflophouse.com/portfolio.json",
+      dataType: "text",
+      contentType: "text/plain; charset=utf-8",
+    })
+    // ...and build carousel items
+      .done(function(data/*, textStatus, jqXHR*/) {
+        console.assert(data);
+
+        let carouselItems = JSON.parse(data);
+
+        let dataType = Object.prototype.toString.call(carouselItems);
+        if (dataType !== '[object Array]') {
+          return console.error('expected array, instead got', dataType);
+        }
+
+        console.log('got', carouselItems.length, 'items for carousel');
+        carouselItems.forEach(function(item) {
+          $("<div><a data-fancybox href='http://www.digitalflophouse.com/portfolio/"+item.full+"' target='_blank'><img src='http://www.digitalflophouse.com/portfolio/"+item.thumb+"'></a></div>")
+            .appendTo(".portfolio-carousel")
+          ;
+        });
+      })
+    // ...or at least let us know it failed
+      .fail(function(jqXHR, textStatus, errorThrown) {
+        console.log(textStatus, errorThrown);
+      })
+      .always(function () {
+        console.log('finished either way');
+        // init carousel on above items
+        $(".portfolio-carousel").slick({
+          "dots": true,
+          "infinite": true,
+          "speed": 500,
+          "fade": true,
+          "cssEase": "linear",
+        });
+      })
+    ;
+  });
+</script>
+<!-- /carousel scripting -->
+</body>
+</html>
