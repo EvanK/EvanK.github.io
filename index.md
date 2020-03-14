@@ -13,7 +13,9 @@ In lieu of the stereotypical "seldom updated personal blog", this is a low maint
 
 **If you are a recruiter, please _do not_. I am happy where I am.** Otherwise, you can find me on any of the following services...
 
+8 [Keybase](https://keybase.io/evanskaufman)
 * [Github](https://github.com/EvanK/)
 * [Stack Overflow CV](http://stackoverflow.com/cv/evanskaufman)
 * [LinkedIn](https://www.linkedin.com/in/evanskaufman)
+* [Mastodon](https://fosstodon.org/@evanskaufman)
 * [Twitter](https://twitter.com/evanskaufman)
