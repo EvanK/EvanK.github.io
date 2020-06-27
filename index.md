@@ -11,7 +11,7 @@ In lieu of the stereotypical "seldom updated personal blog", this is a low maint
 ### How do I contact you?
 ![](images/how.png)
 
-**If you are a recruiter, please _do not_. I am happy where I am.** Otherwise, you can find me on any of the following services...
+You can find me on any of the following services...
 
 * [Keybase](https://keybase.io/evanskaufman)
 * [Github](https://github.com/EvanK/)
