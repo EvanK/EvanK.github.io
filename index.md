@@ -18,4 +18,3 @@ You can find me on any of the following services...
 * [Stack Overflow CV](http://stackoverflow.com/cv/evanskaufman)
 * [LinkedIn](https://www.linkedin.com/in/evanskaufman)
 * [Mastodon](https://fosstodon.org/@evanskaufman)
-* [Twitter](https://twitter.com/evanskaufman)
