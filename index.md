@@ -18,3 +18,5 @@ You can find me on any of the following services...
 * [Dev.to](https://dev.to/evanskaufman)
 * [Keybase](https://keybase.io/evanskaufman)
 * [LinkedIn](https://www.linkedin.com/in/evanskaufman)
+* [Steam](https://steamcommunity.com/id/thknave)
+* [Twitch](https://www.twitch.tv/evanskaufman)
